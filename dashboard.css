@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --color-primary:#5a9294;
+    --color-success:#27e9b5;
+    --color-warning:#f7c94b;
+    --color-danger:#572c2c;
+    --color-danger-variant: rgba(138,59,8,0.8);
+    --color-white:#fff;
+  
+    --color-light:  #f0e39d;
+    --color-black:#000;
+    --color-bg:#a56204db;
+    --color-bg1:#8c8d48;
+    --color-bg2:#c0d555;
+
+    --container-width-1g:76%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+
+    --transition:all 400ms ease;
+}
+body{
+     font-family: "Montserrat", sans-serif;
+     line-height: 25px;
+     color: var(--color-white);
+}
+ .container{
+    width: var(--container-width-1g);
+    margin: 0 auto;
+  }
+
+
+  section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  h1,h2,h3,h4,h5{
+    line-height: 1.2rem;
+  }
+
+  h1{
+    font-size: 2.4rem;
+  }
+
+   h2{
+    font-size: 2rem;
+  }
+
+   h3{
+    font-size: 1.6rem;
+  }
+
+   h4{
+    font-size: 1.3rem;
+  }
+
+  a{
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+  .btn{
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-primary-deep);
+    padding: 1rem 2rem;
+    border: 3px solid #2f453f;
+    font-weight: 600;
+  }
+
+  .btn:hover{
+    background: transparent;
+    color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-primary{
+    background: var(--color-primary-deep);
+    color: var(--color-primary-light);
+  }
+  .btn-primary:hover{
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-soft);
+  }
+
+  nav{
+    background: #f1f0b5;
+    color: #1b625b;
+    width:100vw ;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  /* change nav bar styles*/
+.window-scroll{
+    background-color: var(--color-primary-deep);
+    box-shadow: var(--shadow-soft);
+}
+.nav_container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button{
+    display: none;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav_menu a{
+    font-size:1.2rem;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+.nav_menu i{
+    align-self: center;
+    font-size:1.2rem;
+    transition: all 400ms ease;
+    cursor: pointer;
+    margin-right: 0.3rem;
+}
+
+.nav_menu a:hover{
+    color: var(--color-bg1);
+}
+.logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #aeb735;
+}
+
+.logo-text{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:#887c42;
+}
+.logo-text span{
+    color: var(--main-color);
+}
+
+.hero {
+    background-image: linear-gradient(to left,rgba(72, 69, 59, 0.5),rgba(192, 183, 17, 0.5),rgba(72, 69, 59, 0.5)),url(wakulima/A\ farmer\ is\ using\ precision\ equipment\ to\ apply\ fertilizer\ in\ lush\ green\ field\ showcasing\ modern\ agricultural\ practices\ scene\ captures\ essence\ of\ farming\ with\ vibrant\ crops\ and\ be.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+}
+
+.hero-content h1{
+    color: #fae8be;
+    margin-bottom: 1.8rem;
+    line-height: 2rem;
+}
+
+.hero-content p{
+  color: #404913;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;  
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 25px
+}
+
+.hero-content button {
+  color: #477b2f;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.hero-content img{
+    width: 200px;
+    height: 200px;
+    margin-left: 40%;
+    align-items: center;
+    justify-content: center;
+}
