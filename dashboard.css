@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Aboreto';
+    src: url(Fonts/Aboreto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Bungee';
+    src: url(Fonts/BungeeOutline-Regular.ttf);
+}
+@font-face {
+    font-family: 'Aquire';
+    src: url(Fonts/Aquire-Bold.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,17 +21,17 @@
     box-sizing: border-box;
 }
 :root{
-    --color-primary:#5a9294;
+    --color-primary: #facf39;
     --color-success:#27e9b5;
     --color-warning:#f7c94b;
     --color-danger:#572c2c;
     --color-danger-variant: rgba(138,59,8,0.8);
     --color-white:#fff;
   
-    --color-light:  #f0e39d;
-    --color-black:#000;
-    --color-bg:#a56204db;
-    --color-bg1:#8c8d48;
+    --color-light:  #fbdb6b;
+    --color-black:#1a1f24;
+    --color-bg:#303841;
+    --color-bg1:#46515e;
     --color-bg2:#c0d555;
 
     --container-width-1g:76%;
@@ -74,34 +87,32 @@ img{
 }
   .btn{
     display: inline-block;
-    background: var(--color-primary);
-    color: var(--color-primary-deep);
+    background: var(--color-bg1);
+    color: var(--color-primary);
     padding: 1rem 2rem;
     border: 3px solid #2f453f;
     font-weight: 600;
   }
 
   .btn:hover{
-    background: transparent;
-    color: var(--color-primary-light);
-    border-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-color:#facf39;
     box-shadow: var(--shadow-soft);
   }
 
   .btn-primary{
-    background: var(--color-primary-deep);
-    color: var(--color-primary-light);
+    background: var(--color-primary);
+    color: var(--color-light);
   }
   .btn-primary:hover{
-    background: transparent;
     color: var(--color-primary);
-    border-color: var(--color-primary);
+    border-color:#facf39;
     box-shadow: var(--shadow-soft);
   }
 
   nav{
-    background: #f1f0b5;
-    color: #1b625b;
+     background: linear-gradient(to right,#1a1f24, #facf39, #46515ed9, #facf39, #1a1f24);
+    color: #2f3a45;
     width:100vw ;
     height: 5rem;
     position: fixed;
@@ -111,7 +122,7 @@ img{
 
   /* change nav bar styles*/
 .window-scroll{
-    background-color: var(--color-primary-deep);
+    background-color: var(--color-light);
     box-shadow: var(--shadow-soft);
 }
 .nav_container{
@@ -126,10 +137,11 @@ nav button{
 .nav_menu{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 .nav_menu a{
     font-size:1.2rem;
+    font-weight: 500;
     transition: all 400ms ease;
     cursor: pointer;
 }
@@ -142,7 +154,7 @@ nav button{
 }
 
 .nav_menu a:hover{
-    color: var(--color-bg1);
+    color: var(--color-bg2);
 }
 .logo{
     display: flex;
@@ -158,7 +170,8 @@ nav button{
 
 .logo-text{
     text-align: center;
-    font-size: 1.5rem;
+    font-family: 'Bungee';
+    font-size: 2.2rem;
     font-weight: 600;
     color:#887c42;
 }
@@ -167,8 +180,9 @@ nav button{
 }
 
 .hero {
-    background-image: linear-gradient(to left,rgba(72, 69, 59, 0.5),rgba(192, 183, 17, 0.5),rgba(72, 69, 59, 0.5)),url(wakulima/A\ farmer\ is\ using\ precision\ equipment\ to\ apply\ fertilizer\ in\ lush\ green\ field\ showcasing\ modern\ agricultural\ practices\ scene\ captures\ essence\ of\ farming\ with\ vibrant\ crops\ and\ be.jpg);
+    background-image: linear-gradient(to left, #1a1f24ea,#46515ecf, #1a1f24ea),url(unnit/Nairobi_\ Green\ City\ in\ the\ Sun\ _\ City\ Gallery.jpeg);
     background-size: cover;
+    object-position:left;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -189,7 +203,7 @@ nav button{
 }
 
 .hero-content p{
-  color: #404913;
+    color: linear-gradient(to left, #1a1f24,#46515e, #1a1f24);
     margin-bottom: 2rem;
     font-size: 1.5rem;  
     font-style: italic;
@@ -198,11 +212,12 @@ nav button{
 }
 
 .hero-content button {
-  color: #477b2f;
+  color: #facf39;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
   font-size: larger;
   cursor: pointer;
+  border-radius: 10PX;
 }
 
 .hero-content img{
@@ -211,4 +226,143 @@ nav button{
     margin-left: 40%;
     align-items: center;
     justify-content: center;
+}
+
+/* Gradient Animation */
+.gradient{
+    background: linear-gradient(to right,#1a1f24, #46515e, #facf39, #6f7781,#facf39, #46515e, #1a1f24);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+.hero-logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #facf39; 
+    margin-bottom: 2rem;
+}
+
+.property-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 3.5rem;
+}
+
+.property{
+    padding: 1rem;
+    background-color: #303841;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: inset;
+    border-radius: 10px;
+}
+
+.property:hover{
+    background: #6f7781;
+    border-color: var(--color-primary-light);
+    transform: scale(1.1);
+}
+
+.property-info{
+    padding: 1.5rem;
+}
+
+.property-info p{
+    margin: 1rem 0 2rem;
+    font-size: 0.85rem;
+}
+
+.property-image img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-fit:cover ;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+}
+
+.property-image i{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+}
+
+.description{
+    text-align: center;
+    margin:1rem;
+    justify-content: center;
+}
+
+.description p{
+    margin-bottom: 2px;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;    
+}
+
+.description h1{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description h5{
+  margin-bottom: 20px;
+  background-color:#303841;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: large;
+  box-sizing: border-box;
+  border-radius: 50px; 
+}
+
+
+
+/* ========== UNIVERSAL RESPONSIVE STYLES ========== */
+
+/* Small devices (phones, up to 600px) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  nav .nav_menu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  nav .nav_menu li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #open-menu-btn {
+    display: inline-block;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
 }
